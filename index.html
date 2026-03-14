@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>Document</title>
   </head>
   <body>
@@ -157,37 +158,74 @@
     <!-- Food Gallery -->
     <div class="food-gallery max-w-7xl mx-auto">
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="autoplay w-full">
 
-            <div class="food-item relative">
-                <img src="images/menu1.jpeg" class="w-full h-64 object-cover" alt="">
-                <div class="food-label">
-                    <span class="shadow">Salads</span>
+            <!-- Item 1 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu1.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Salads</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="food-item relative">
-                <img src="images/menu2.jpeg" class="w-full h-64 object-cover" alt="">
-                <div class="food-label">
-                    <span class="shadow">Soups</span>
+        
+            <!-- Item 2 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu2.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Soups</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="food-item relative">
-                <img src="images/menu3.jpeg" class="w-full h-64 object-cover" alt="">
-                <div class="food-label">
-                    <span class="shadow">Pizzas</span>
+        
+            <!-- Item 3 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu3.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Pizzas</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="food-item relative">
-                <img src="images/menu4.jpeg" class="w-full h-64 object-cover" alt="">
-                <div class="food-label">
-                    <span class="shadow">Desserts</span>
+        
+            <!-- Item 4 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu4.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Desserts</span>
+                    </div>
                 </div>
             </div>
-
+        
+            <!-- Item 5 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu1.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Drinks</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Item 6 -->
+            <div class="px-3">
+                <div class="food-item relative">
+                    <img src="images/menu2.jpeg" class="w-full h-64 object-cover" alt="">
+                    <div class="food-label">
+                        <span class="shadow">Special</span>
+                    </div>
+                </div>
+            </div>
+        
         </div>
+        
+        
+
+
+     
 
     </div>
 
@@ -404,13 +442,13 @@
         <p class="italic text-[20px] text-[#d99904] mb-3">
             ---Should Try---
         </p>
-
+        <div class="w-[424px] h-[4px] bg-[#e8e8e8] mx-auto my-3"></div>
         <h2 class="text-[40px] font-bold text-[#151515]">
             CHEF RECOMMENDS
         </h2>
 
-        <div class="w-[424px] h-[4px] bg-[#e8e8e8] mx-auto my-6"></div>
-        <div class="w-[424px] h-[4px] bg-[#e8e8e8] mx-auto"></div>
+        
+        <div class="w-[424px] h-[4px] bg-[#e8e8e8] mx-auto mt-3"></div>
 
     </div>
 
@@ -514,6 +552,48 @@
 
 
 
-    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+
+
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+    <!-- Slick CSS -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    
+      $('.autoplay').slick({
+        slidesToShow: 4,      // 👈 4টা show
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: false,
+        adaptiveHeight: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    
+    });
+    </script>
+    
+    
+
   </body>
 </html>
