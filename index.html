@@ -139,7 +139,7 @@
 </div>
       
 
-<div class="container mx-auto">
+
 <!-- Food Gallery -->
 
 <section class="w-full mx-auto">
@@ -581,7 +581,108 @@
       </div>
     </div>
   
+</section>
+
+<!-- Testimonials -->
+<section class="py-20">
+    <div class="max-w-5xl mx-auto px-4 relative text-center">
+        <!-- Title -->
+        <p class="text-gray-500 mb-2">---What Our Clients Say---</p>
+        <h2 class="text-4xl font-bold mb-10">TESTIMONIALS</h2>
+      <!-- Slider -->
+      <div id="testimonialSlider" class="overflow-hidden">
+        <div class="flex transition-transform duration-500" id="slides">
+           
+  
+          <!-- Slide 1 -->
+          <div class="min-w-full text-center">
+            <div class="flex justify-center gap-2 mb-4">
+              ★★★★☆
+            </div>
+            <p class="text-gray-600 mb-4">
+              Various version have evolved over the years, sometimes by accident,
+              sometimes on purpose injected humour and the like.
+            </p>
+            <h3 class="text-[#cd9003] text-2xl font-semibold">
+              MD JAHEDUL ALAM
+            </h3>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="min-w-full text-center">
+            <div class="flex justify-center gap-2 mb-4">
+              ★★★★★
+            </div>
+            <p class="text-gray-600 mb-4">
+              This is another testimonial content. Very good service and support.
+            </p>
+            <h3 class="text-[#cd9003] text-2xl font-semibold">
+              CLIENT NAME
+            </h3>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="min-w-full text-center">
+            <div class="flex justify-center gap-2 mb-4">
+              ★★★★☆
+            </div>
+            <p class="text-gray-600 mb-4">
+              Amazing experience working with this company.
+            </p>
+            <h3 class="text-[#cd9003] text-2xl font-semibold">
+              JOHN DOE
+            </h3>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- Arrows -->
+      <button onclick="prevSlide()"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow w-12 h-12 rounded-full">
+        ←
+      </button>
+  
+      <button onclick="nextSlide()"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow w-12 h-12 rounded-full">
+        →
+      </button>
+  
+    </div>
   </section>
+  
+  <!-- Footer -->
+  <footer class="w-full">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2">
+      <!-- Left Side -->
+      <div class="bg-gray-800 flex justify-center py-20">
+        <div class="text-white text-center max-w-md">
+          <h3 class="text-3xl mb-6">CONTACT US</h3>
+          <p class="text-lg">123 ABS Street, Uni 21, Bangladesh</p>
+          <p class="text-lg">+88 123456789</p>
+          <p class="text-lg">Mon - Fri: 08:00 - 22:00</p>
+          <p class="text-lg">Sat - Sun: 10:00 - 23:00</p>
+        </div>
+      </div>
+  
+      <!-- Right Side -->
+      <div class="bg-gray-900 flex justify-center py-20">
+        <div class="text-white text-center max-w-md">
+          <h3 class="text-3xl mb-6">Follow US</h3>
+          <p class="text-lg mb-8">Join us on social media</p>
+  
+          <div class="flex justify-center gap-10">
+            <div class="w-8 h-8 bg-white"></div>
+            <div class="w-8 h-8 bg-white"></div>
+            <div class="w-8 h-8 bg-white"></div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+
+
 
 
 
@@ -596,7 +697,32 @@
 
 <!-- Slick JS -->
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+<script>
+    let index = 0;
+    const slides = document.getElementById("slides");
+    
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+    
+    function nextSlide() {
+      if (index < 2) {
+        index++;
+      } else {
+        index = 0;
+      }
+      showSlide();
+    }
+    
+    function prevSlide() {
+      if (index > 0) {
+        index--;
+      } else {
+        index = 2;
+      }
+      showSlide();
+    }
+</script>
 <script>
     $(document).ready(function(){
     
